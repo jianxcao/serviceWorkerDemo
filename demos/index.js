@@ -76,18 +76,18 @@ window.addEventListener('load', function () {
 		// 直接显示一个通知
 		// 不一定支持，有的手机有这个api不让掉，会抛出错误
 		// 建议在serviceWorker中使用
-		
+
 		if (window.Notification && Notification.permission === "granted") {
-			alert(1);
 			try {
 				var notify = new Notification('牛逼', {
-					body: '你好啊'
+					body: '你好啊',
+					tag: 'test',
+					'renotify': true,
+					requireInteraction: true
 				});
-				alert(2);
 				notify.onshow = function () {
-					alert('show');
+					console.log('show');
 				};
-				alert(3);
 				notify.onclick = function (e) {
 					console.log('你好被点击了');
 					e.target.close();

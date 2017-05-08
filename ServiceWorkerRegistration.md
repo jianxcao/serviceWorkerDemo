@@ -49,11 +49,12 @@ ServiceWorkerRegistration 主要是标记了serviceWorker的注册，每当通�
 - `image [string]` 要显示在通知中的图片,是一个url
 - `lang [string]` 通知预设语言,设置字符串必须符合[BCP 47 language tag.
 ](https://tools.ietf.org/html/bcp47)
-- `renotify`
-- `requireInteraction`
+- `renotify` 是否再次提醒，这个属性在有相同tag的通知再次发生时候，控制这个通知是否有震动和声音的触发
+- `requireInteraction` 在桌面版本chrome，通知出现后，如果是false，大约在20s后，通知会自动小化，如果是true则不会
 - `tag String` 一个标记，标记这个notification,有了这个标记可以在getNotifications方法中找到这个通知，可以替换修改这个通知, 参数可以加tag过滤 如(registration.getNotifications({tag: 'test'}))， 过滤tag是test的通知
-- `vibrate` 震动，有震动的设备可以调设备震动的频率，可以使数组或者 数字，如果是数组偶数表示震动的时间长度，奇数表示停止的时间长度，单位是毫秒
+- `vibrate` 震动，有震动的设备可以调设备震动的频率，可以使数组或者数字，如果是数组偶数表示震动的时间长度，奇数表示停止的时间长度，单位是毫秒
 - `data [any]` 可以使任意数据，与当前的通知关联,在通知被点击后会传递到event中
+- `timestamp` 在android设备上，会默认在右上角显示一个通知出现的时间,这个参数可以改变这个时间
 
 ### ServiceWorkerRegistration.update()
 忽略缓存更新一个 serviceWorker
