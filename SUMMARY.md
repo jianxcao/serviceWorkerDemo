@@ -5,5 +5,5 @@
 * [生命周期](/lifeCycly.md)
 * 相关接口
     * [ServiceWorkerContainer接口](/ServiceWorkerContainer.md)
-    * [ServiceWorkerContainer接口](/ServiceWorkerGlobalScope.md)
+    * [ServiceWorkerGlobalScope接口](/ServiceWorkerGlobalScope.md)
     * [ServiceWorkerRegistration接口](/ServiceWorkerRegistration.md)

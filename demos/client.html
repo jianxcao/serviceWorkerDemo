@@ -53,7 +53,7 @@ var serviceWorker = navigator.serviceWorker;
     };
 
     function serviceEvt () {
-        serviceWorker.addEventListener('oncontrollerchange', function () {
+        serviceWorker.addEventListener('controllerchange', function () {
             console.log('sw1 oncontrollerchange triggerd');
         });
 

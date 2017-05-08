@@ -8,3 +8,6 @@ serviceWorker则是新出现得一种技术，目前已经有很多网站使用�
 
 serviceWorker能满足web开发实现离线和推送的功能
 
+
+ 兼容性 pc端 chrome 43以上，firefox 44以上，手机端chrome
+国产浏览器部分支持，通知基本上都不行，serviceWorker部分支持,缓存部分支持

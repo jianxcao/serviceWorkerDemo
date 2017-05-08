@@ -4,9 +4,7 @@ serviceWorker通过[ServiceWorkerContainer](./ServiceWorkerContainer.md)接口�
 
 `navigator.serviceWorker`是`ServiceWorkerContainer `的一个实例
 
-通过`navigator.serviceWorker.register`去注册一个serviceWorker
-
-
+通过`navigator.serviceWorker.register`去注册一个serviceWorker,将返回一个promise，promise参数[ServiceWorkerRegistration](./ServiceWorkerRegistration.md)
 
 如:
 
@@ -14,6 +12,8 @@ serviceWorker通过[ServiceWorkerContainer](./ServiceWorkerContainer.md)接口�
     // 通过register方法注册一个 serviceWorker
     // scope是指在哪些url下该serviceWorker生效
     // 注册后返回promise对象
+    // promise 对象参数是 ServiceWorkerRegistration的一个实例
+    // 通过ServiceWorkerRegistration的实例，获取serviceWorker实例
     navigator.serviceWorker.register('service-worker.js', {
         scope: './'
     }).then(function (registration) {
