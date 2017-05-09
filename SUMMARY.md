@@ -3,6 +3,8 @@
 * [什么是serviceWorker.md](what.md)
 * [如何创建一个serviceWorker](/create.md)
 * [生命周期](/lifeCycly.md)
+* [使用fetch事件操作请求](/fetch.md)
+* [使用pushManager实现消息推送](/pushManager.md)
 * 相关接口
     * [ServiceWorkerContainer接口](/ServiceWorkerContainer.md)
     * [ServiceWorkerGlobalScope接口](/ServiceWorkerGlobalScope.md)

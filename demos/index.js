@@ -9,7 +9,7 @@ function serviceReg () {
 			scope: './'
 		})
 		.then(function (registration) {
-			console.log(registration);
+			console.log('registration', registration);
 			var worderInstance;
 			if (registration.installing) {
 				worderInstance = registration.installing;
@@ -18,6 +18,7 @@ function serviceReg () {
 				worderInstance = registration.waiting;
 				logEle.textContent = 'waiting';
 			} else if (registration.active) {
+				console.log('in active')
 				worderInstance = registration.active;
 				logEle.textContent = 'active';
 			}
